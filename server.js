@@ -9,7 +9,7 @@ var iconv = require('iconv-lite')
 var app = express()
 
 app.get('/www.osiliana.ee/:page', function (req, res) {
-  console.log(req.params.page)
+
   request({url: 'http://www.osiliana.ee/' + req.params.page, encoding: 'binary'}, function (e, r, b) {
        if (!e && r.statusCode == 200) {
          // b = iconv.decode(b, 'iso-8859-1'
