@@ -37,7 +37,7 @@ function parse(contents) {
     
     images.forEach(function(image) { 
       image = path.basename(image.split(',')[1]).split('&')[0]                 
-      output.images.push({url: image_base + '/' + image})    
+      output.images.push(image_base + '/' + image)    
     })
   }
 
